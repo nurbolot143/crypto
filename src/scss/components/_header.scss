@@ -1,0 +1,50 @@
+@import "../vars";
+@import "../media";
+
+.header {
+  z-index: 40;
+
+  &__logo {
+    z-index: 10;
+  }
+
+  @include media(1180) {
+    height: 106px;
+    padding-top: 12px;
+
+    &_active {
+      max-width: 328px;
+      background: $light;
+
+      @include media(360) {
+        max-width: 100%;
+      }
+    }
+
+    &_active .header__burger {
+      transform: translateX(75%);
+      @include media(360) {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @include media(360) {
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+    z-index: 10;
+
+    @include media(1180) {
+      display: block;
+    }
+  }
+}

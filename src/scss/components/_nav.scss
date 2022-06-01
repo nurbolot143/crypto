@@ -1,0 +1,97 @@
+@import "../media";
+@import "../vars";
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $light;
+    border-radius: 28px;
+    overflow: hidden;
+    z-index: 1;
+
+    &_active {
+      background: $accent-color;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      background: $accent-color;
+      transition: all 0.3s ease;
+      z-index: -1;
+      transform: scale(0, 0.3);
+
+      @include media(1180) {
+        background: $light;
+      }
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+
+  @include media(1180) {
+    position: fixed;
+    top: 106px;
+    left: -100%;
+    width: 328px;
+    height: 100%;
+    background-color: $light;
+    overflow: auto;
+    z-index: 2;
+
+    &_active {
+      left: 0;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      margin: 22px 0;
+
+      & + & {
+        margin-top: 0;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 150%;
+      color: $accent-color;
+
+      &_active {
+        color: $light;
+      }
+    }
+  }
+
+  @include media(360) {
+    width: 100%;
+  }
+}
