@@ -1,4 +1,5 @@
 @import "./vars";
+@import "./media";
 
 /*Обнуление*/
 * {
@@ -81,9 +82,102 @@ h6 {
   max-width: 1348px;
   padding: 0 15px;
   margin: 0 auto;
+  height: inherit;
 }
 
 body {
   font-family: $main-font;
   overflow-y: scroll;
+}
+
+.body_lock {
+  overflow: hidden;
+}
+
+.title {
+  margin: 92px 0 55px 0;
+  position: relative;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $light;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 50%;
+    height: 5px;
+    width: 94px;
+    background: $purple;
+    transform: translateX(-50%);
+  }
+
+  @include media(1056) {
+    font-size: 65px;
+  }
+
+  @include media(912) {
+    font-size: 55px;
+    margin-top: 60px;
+  }
+
+  @include media(770) {
+    font-size: 45px;
+    margin-top: 55px;
+  }
+
+  @include media(570) {
+    font-size: 40px;
+    margin-top: 45px;
+  }
+
+  @include media(460) {
+    font-size: 35px;
+    margin: 30px 0 47px 0;
+  }
+
+  @include media(364) {
+    font-size: 25px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 11px 36px;
+  border: 2px solid $light;
+  border-radius: 28px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $light;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 28px;
+    background: $yellow;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: scale(0, 0.2);
+  }
 }

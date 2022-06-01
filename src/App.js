@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 
 import "./scss/App.scss";
 
@@ -13,9 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        {/* <Routes>
-          <Route path="/about" element={<Header />} />
-        </Routes> */}
       </div>
     </BrowserRouter>
   );

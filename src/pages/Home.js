@@ -1,7 +1,12 @@
 import React from "react";
+import Promo from "../components/promo/Promo";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main className="home">
+      <Promo />
+    </main>
+  );
 };
 
 export default Home;

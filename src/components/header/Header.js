@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "../assets/images/logo.png";
-import logoDark from "../assets/images/logoDark.png";
-import burger from "../assets/icons/burger.svg";
-import closeBtn from "../assets/icons/closeBtn.svg";
+import logo from "../../assets/images/logo.png";
+import logoDark from "../../assets/images/logoDark.png";
+import burger from "../../assets/icons/burger.svg";
+import closeBtn from "../../assets/icons/closeBtn.svg";
 
 const navItems = [
   { id: 1, label: "home", to: "/" },
@@ -18,6 +18,12 @@ const navItems = [
 
 const Header = () => {
   const [burgerActive, setBurgerActive] = useState(true);
+
+  useEffect(() => {
+    burgerActive
+      ? document.querySelector("body").classList.remove("body_lock")
+      : document.querySelector("body").classList.add("body_lock");
+  }, [burgerActive]);
 
   return (
     <header className={burgerActive ? "header" : "header header_active"}>

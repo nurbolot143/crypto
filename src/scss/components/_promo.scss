@@ -1,0 +1,80 @@
+@import "../media";
+@import "../vars";
+
+.promo {
+  border: 1px solid transparent;
+  position: relative;
+  height: 786px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -122px;
+    left: 0;
+    height: calc(100% + 102px);
+    width: 100%;
+    background: url("../../assets/images/promoBg.jpg") no-repeat;
+    background-position: top -150px center;
+    background-size: fill;
+    z-index: -1;
+  }
+
+  &__body {
+    height: 90%;
+    width: 100%;
+    background: url("../../assets/images/phons.png") no-repeat;
+    background-position: bottom -10px right 0;
+    background-size: 575px auto;
+
+    @include media(980) {
+      background-size: 473px auto;
+    }
+
+    @include media(728) {
+      background-size: 373px auto;
+      // height: 694px;
+    }
+
+    @include media(478) {
+      background-position: 84px bottom;
+    }
+  }
+
+  &__title {
+    padding-top: 38px;
+    text-align: left;
+
+    &::after {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    @include media(1180) {
+      padding-top: 0;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: $light;
+
+    width: 355px;
+    margin-bottom: 20px;
+
+    @include media(400) {
+      font-size: 12px;
+      width: 237px;
+    }
+
+    @include media(250) {
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+}
