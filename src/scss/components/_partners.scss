@@ -1,0 +1,40 @@
+@import "../media";
+@import "../vars";
+
+.partners {
+  margin-bottom: 50px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 -90px 0 0;
+
+    @include media(970) {
+      flex-wrap: wrap;
+    }
+
+    @include media(770) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 1 16.6666%;
+    margin: 50px 90px 0 0;
+    overflow: hidden;
+
+    @include media(770) {
+      margin: 20px;
+    }
+
+    @include media(470) {
+      flex: 0 1 35%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

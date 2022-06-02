@@ -3,6 +3,7 @@ import Benefits from "../components/benefits/Benefits";
 import ImplSheet from "../components/implSheet/ImplSheet";
 import Info from "../components/info/Info";
 import Intro from "../components/intro/Intro";
+import Partners from "../components/partners/Partners";
 import Promo from "../components/promo/Promo";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Benefits />
       <Info />
       <ImplSheet />
+      <Partners />
     </main>
   );
 };
