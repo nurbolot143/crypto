@@ -1,0 +1,67 @@
+@import "../media";
+@import "../vars";
+
+.info {
+  margin-bottom: 145px;
+
+  @include media(920) {
+    margin-bottom: 100px;
+  }
+
+  @include media(692) {
+    margin-bottom: 60px;
+  }
+
+  @include media(440) {
+    margin-bottom: 40px;
+  }
+
+  @include media(380) {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    max-width: 1095px;
+    display: flex;
+    gap: 20px;
+
+    @include media(756) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__img,
+  &__body {
+    flex: 0 1 50%;
+
+    @include media(756) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__img {
+    min-height: 442px;
+    background: url("../../assets/images/info_bg.jpg") center no-repeat;
+    background-size: contain;
+
+    @include media(489) {
+      background-size: cover;
+      min-height: 342px;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+    border: 2px solid $accent-color;
+    transition: 0.3s;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    @include media(770) {
+      margin-top: 25px;
+    }
+  }
+}
