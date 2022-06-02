@@ -1,5 +1,6 @@
 import React from "react";
 import Benefits from "../components/benefits/Benefits";
+import ImplSheet from "../components/implSheet/ImplSheet";
 import Info from "../components/info/Info";
 import Intro from "../components/intro/Intro";
 import Promo from "../components/promo/Promo";
@@ -11,6 +12,7 @@ const Home = () => {
       <Intro />
       <Benefits />
       <Info />
+      <ImplSheet />
     </main>
   );
 };

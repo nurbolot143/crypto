@@ -1,0 +1,151 @@
+@import "../media";
+@import "../vars";
+
+.implSheet {
+  text-align: center;
+
+  &__text {
+    max-width: 770px;
+    margin: 20px auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include media(830) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    height: 280px;
+    margin: -10px;
+
+    @include media(830) {
+      height: 140px;
+    }
+
+    &:nth-child(even) {
+      .implSheet__body {
+        align-self: end;
+
+        @include media(830) {
+          align-self: start;
+        }
+
+        &::after {
+          top: -3px;
+
+          @include media(830) {
+            top: calc(-25%);
+          }
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      .implSheet__body {
+        margin-bottom: -3px;
+
+        &::after {
+          top: auto;
+          bottom: -3px;
+
+          @include media(830) {
+            bottom: auto;
+            top: 0;
+          }
+        }
+
+        &::before {
+          top: auto;
+          bottom: -11px;
+
+          @include media(830) {
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    &_active .implSheet__body::after {
+      background: $yellow;
+    }
+
+    &_active .implSheet__body::before {
+      background: $light;
+      border-color: $yellow;
+    }
+  }
+
+  &__body {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include media(830) {
+      margin-left: 42px;
+      justify-content: start;
+      padding-left: 30px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -3px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #e0e0e0;
+
+      @include media(830) {
+        width: 6px;
+        height: 200%;
+        top: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: -11px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 6px solid #e0e0e0;
+      background: $accent-color;
+      z-index: 4;
+
+      @include media(830) {
+        left: -7px;
+      }
+    }
+  }
+
+  &__date {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4f4f4f;
+  }
+
+  &__descr {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
