@@ -1,6 +1,7 @@
 import React from "react";
 import Benefits from "../components/benefits/Benefits";
 import Charts from "../components/charts/Charts";
+import Events from "../components/events/Events";
 import GlobalNetwork from "../components/globalNetwork/GlobalNetwork";
 import ImplSheet from "../components/implSheet/ImplSheet";
 import Info from "../components/info/Info";
@@ -23,6 +24,7 @@ const Home = () => {
       <Wallets />
       <Charts />
       <Miner />
+      <Events />
     </main>
   );
 };
