@@ -1,0 +1,117 @@
+@import "../media";
+@import "../vars";
+
+.miner {
+  padding-top: 150px;
+  height: 738px;
+  background: url("../../assets/images/miner_bg.jpg") no-repeat;
+  background-position: center left 33%;
+  background-size: fit;
+
+  @include media(770) {
+    background-position: center left 58%;
+    padding-top: 100px;
+  }
+
+  @include media(420) {
+    padding-top: 60px;
+  }
+
+  h3,
+  h2,
+  p {
+    color: $light;
+  }
+
+  p {
+    opacity: 0.7;
+  }
+
+  &__wrapper {
+    max-width: 750px;
+  }
+
+  &__infoWrapper {
+    display: flex;
+  }
+
+  &__info {
+    &:first-child {
+      margin-right: 100px;
+
+      @include media(427) {
+        margin-right: 30px;
+      }
+    }
+    p {
+      width: 100%;
+    }
+  }
+
+  &__count {
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: $light;
+
+    @include media(770) {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    margin-bottom: 26px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 350px));
+    row-gap: 20px;
+    column-gap: 50px;
+
+    @include media(770) {
+      margin-top: 36px;
+    }
+
+    @include media(408) {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+  }
+
+  &__item {
+    background: #0b060c;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+    border-radius: 38.5px;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      span {
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 150%;
+        align-items: center;
+        letter-spacing: 0.02em;
+        color: $light;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $light;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    margin: 18px 28px 18px 19px;
+  }
+}
