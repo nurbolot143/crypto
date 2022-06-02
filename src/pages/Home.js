@@ -1,5 +1,6 @@
 import React from "react";
 import Benefits from "../components/benefits/Benefits";
+import Charts from "../components/charts/Charts";
 import GlbalNetwork from "../components/globalNetwork/GlbalNetwork";
 import ImplSheet from "../components/implSheet/ImplSheet";
 import Info from "../components/info/Info";
@@ -19,6 +20,7 @@ const Home = () => {
       <Partners />
       <GlbalNetwork />
       <Wallets />
+      <Charts />
     </main>
   );
 };

@@ -94,6 +94,12 @@ h6 {
 body {
   font-family: $main-font;
   overflow-y: scroll;
+
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .body_lock {
