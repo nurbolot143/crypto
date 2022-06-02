@@ -13,7 +13,7 @@ const implSheetItems = [
     id: 2,
     descr: "Tracking services for different smart contract types",
     date: "March 2018",
-    isActive: false,
+    isActive: true,
   },
   {
     id: 3,

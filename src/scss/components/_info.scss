@@ -55,9 +55,10 @@
     margin-top: 20px;
     border: 2px solid $accent-color;
     transition: 0.3s;
+    color: $accent-color;
 
     &:hover {
-      color: $accent-color;
+      color: $light;
     }
 
     @include media(770) {
