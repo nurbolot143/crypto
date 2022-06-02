@@ -181,3 +181,71 @@ body {
     transform: scale(0, 0.2);
   }
 }
+
+.page {
+  position: relative;
+  padding-left: 114px;
+  margin: 51px 0 20px 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 94px;
+    height: 5px;
+    top: 50%;
+    left: 0;
+    background: $purple;
+    transform: translateY(-50%);
+  }
+}
+
+.subtitle {
+  font-family: $accent-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+
+  @include media(912) {
+    font-size: 40px;
+  }
+
+  @include media(570) {
+    font-size: 35px;
+  }
+
+  @include media(364) {
+    font-size: 30px;
+  }
+}
+
+.text {
+  margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #4f4f4f;
+
+  @include media(912) {
+    font-size: 16px;
+  }
+
+  @include media(570) {
+    font-size: 14px;
+  }
+
+  @include media(364) {
+    font-size: 12px;
+  }
+}

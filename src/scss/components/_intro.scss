@@ -1,0 +1,46 @@
+@import "../media";
+@import "../vars";
+
+.intro {
+  margin-bottom: 145px;
+
+  @include media(920) {
+    margin-bottom: 100px;
+  }
+
+  @include media(692) {
+    margin-bottom: 60px;
+  }
+
+  @include media(440) {
+    margin-bottom: 40px;
+  }
+
+  @include media(380) {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    max-width: 1095px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: minmax(238px, auto);
+    grid-gap: 20px;
+
+    @include media(320) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    min-height: 392px;
+    background: url("../../assets/images/intro_bg.jpg") left no-repeat;
+    background-size: contain;
+    align-self: flex-end;
+
+    @include media(489) {
+      min-height: 238px;
+      background-position: center;
+    }
+  }
+}

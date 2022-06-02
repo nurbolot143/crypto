@@ -32,11 +32,10 @@
 
     @include media(728) {
       background-size: 373px auto;
-      // height: 694px;
     }
 
     @include media(478) {
-      background-position: 84px bottom;
+      background-position: 64px bottom;
     }
   }
 
