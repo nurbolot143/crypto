@@ -4,27 +4,28 @@
 .promo {
   border: 1px solid transparent;
   position: relative;
-  height: 786px;
+  height: 848px;
+  margin-top: -60px;
+  padding-top: 60px;
+  background: url("../../assets/images/promo_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: fill;
+  z-index: -1;
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: -122px;
-    left: 0;
-    height: calc(100% + 102px);
-    width: 100%;
-    background: url("../../assets/images/promoBg.jpg") no-repeat;
-    background-position: top -150px center;
+  @include media(770) {
+    background: url("../../assets/images/promo_bg2.jpg") no-repeat;
+    background-position: center;
     background-size: fill;
-    z-index: -1;
+  }
+
+  @include media(1200) {
+    margin-top: -110px;
+    padding-top: 80px;
   }
 
   &__body {
     height: 90%;
     width: 100%;
-    background: url("../../assets/images/phons.png") no-repeat;
-    background-position: bottom -10px right 0;
-    background-size: 575px auto;
 
     @include media(980) {
       background-size: 473px auto;
