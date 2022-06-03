@@ -18,3 +18,9 @@ export { default as windows } from "./windows-8.svg";
 export { default as globalNetwork1 } from "./globalNetwork_icon1.svg";
 export { default as globalNetwork2 } from "./globalNetwork_icon2.svg";
 export { default as globalNetwork3 } from "./globalNetwork_icon3.svg";
+
+export { default as sociol1 } from "./sociol1.svg";
+export { default as sociol2 } from "./sociol2.svg";
+export { default as sociol3 } from "./sociol3.svg";
+export { default as sociol4 } from "./sociol4.svg";
+export { default as sociol5 } from "./sociol5.svg";
