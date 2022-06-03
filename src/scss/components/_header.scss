@@ -8,6 +8,10 @@
     z-index: 10;
   }
 
+  &__sociol {
+    display: none;
+  }
+
   @include media(1180) {
     height: 106px;
     padding-top: 12px;
@@ -26,6 +30,17 @@
       @include media(360) {
         transform: translateX(0);
       }
+    }
+
+    &_active .header__sociol {
+      display: block;
+      margin-top: 120px;
+      padding: 0 15px;
+      background: $light;
+    }
+
+    &_active .sociol__item + .sociol__item {
+      margin-left: 15px;
     }
   }
 
@@ -46,5 +61,11 @@
     @include media(1180) {
       display: block;
     }
+  }
+}
+
+@media (max-height: 600px) {
+  .header_active .header__sociol {
+    margin-top: 30px;
   }
 }

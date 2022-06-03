@@ -17,7 +17,6 @@ const Home = () => {
   return (
     <main className="home">
       <Promo />
-      <Team />
       <Intro />
       <Benefits />
       <Info />
@@ -25,6 +24,7 @@ const Home = () => {
       <Partners />
       <GlobalNetwork />
       <Wallets />
+      <Team />
       <Charts />
       <Miner />
       <Events />

@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png";
 import logoDark from "../../assets/images/logoDark.png";
 import burger from "../../assets/icons/burger.svg";
 import closeBtn from "../../assets/icons/closeBtn.svg";
-
+import SociolList from "../sociol/SociolList";
 const navItems = [
   { id: 1, label: "home", to: "/" },
   { id: 2, label: "resources", to: "/resources" },
@@ -52,6 +52,9 @@ const Header = () => {
                   </li>
                 );
               })}
+              <div className="header__sociol">
+                <SociolList />
+              </div>
             </ul>
           </div>
           <div
