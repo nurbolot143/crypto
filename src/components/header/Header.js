@@ -26,7 +26,10 @@ const Header = () => {
   }, [burgerActive]);
 
   return (
-    <header className={burgerActive ? "header" : "header header_active"}>
+    <header
+      className={burgerActive ? "header" : "header header_active"}
+      id="header"
+    >
       <div className="container">
         <div className="header__wrapper">
           <div className="logo header__logo">

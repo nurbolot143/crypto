@@ -29,7 +29,7 @@ const Footer = () => {
         </p>
 
         <div className="scrollTop">
-          <a href="#promo">
+          <a href="#header">
             <svg
               width="26"
               height="26"
