@@ -10,12 +10,14 @@ import Intro from "../components/intro/Intro";
 import Miner from "../components/miner/Miner";
 import Partners from "../components/partners/Partners";
 import Promo from "../components/promo/Promo";
+import Team from "../components/team/Team";
 import Wallets from "../components/wallets/Wallets";
 
 const Home = () => {
   return (
     <main className="home">
       <Promo />
+      <Team />
       <Intro />
       <Benefits />
       <Info />

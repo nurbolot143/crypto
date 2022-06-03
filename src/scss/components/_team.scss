@@ -1,0 +1,105 @@
+@import "../media";
+@import "../vars";
+
+.team {
+  text-align: center;
+
+  &__top {
+    max-width: 770px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__body {
+    margin: 0 auto;
+
+    max-width: 200px;
+    text-align: center;
+
+    @include media(770) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include media(430) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      filter: drop-shadow(0px 0px 35px rgba(0, 0, 0, 0.15));
+    }
+  }
+
+  .slick-list {
+    padding: 40px 0;
+  }
+
+  .slick-arrow {
+    border: 1px solid #4f4f4f;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $light;
+    z-index: 6;
+    background: url("../../assets/icons/right-arrow.svg") center no-repeat;
+
+    @include media(770) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .slick-prev {
+    transform: rotate(180deg);
+    margin-top: -27px;
+
+    @include media(1024) {
+      margin-top: -17px;
+      margin-left: 15px;
+    }
+  }
+
+  .slick-next {
+    @include media(1024) {
+      margin-right: 15px;
+    }
+  }
+
+  &__name {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+
+    @include media(770) {
+      flex: 14;
+    }
+  }
+
+  &__position {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #4f4f4f;
+  }
+}
