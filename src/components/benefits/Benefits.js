@@ -41,24 +41,22 @@ const Benefits = () => {
 
         <h2 className="subtitle benefits__title">Lymcoin Benefits</h2>
 
-        <div className="benefits__wrapper">
-          <ul className="benefits__list">
-            {benefitsItems.map(({ id, icon, title, descr }, idx) => {
-              return (
-                <li key={`${id}_${idx}`} className="benefits__item">
-                  <div className="benefits__count">
-                    {idx > 9 ? idx + 1 : `0${idx + 1}`}.
-                  </div>
-                  <div className="benefits__body">
-                    <img src={icon} alt={title} />
-                    <h4 className="benefits__subtitle">{title}</h4>
-                    <p className="text benefits__text">{descr}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className="benefits__list">
+          {benefitsItems.map(({ id, icon, title, descr }, idx) => {
+            return (
+              <li key={`${id}_${idx}`} className="benefits__item">
+                <div className="benefits__count">
+                  {idx > 9 ? idx + 1 : `0${idx + 1}`}.
+                </div>
+                <div className="benefits__body">
+                  <img src={icon} alt={title} />
+                  <h4 className="benefits__subtitle">{title}</h4>
+                  <p className="text benefits__text">{descr}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

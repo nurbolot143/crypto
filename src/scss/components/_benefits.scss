@@ -2,29 +2,19 @@
 @import "../vars";
 
 .benefits {
-  &__wrapper {
-    position: relative;
-    width: calc(100% + 30px);
-    min-height: 500px;
-    margin-left: -15px;
-    overflow-x: auto;
-
-    @include media(470) {
-      min-height: 350px;
-    }
-  }
-
   &__list {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    margin: 50px auto;
+    padding: 50px 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 
     @include media(856) {
       flex-wrap: nowrap;
+      justify-content: space-between;
+      overflow-x: scroll;
+      width: calc(100% + 30px);
+      margin-left: -15px;
     }
   }
 
@@ -32,7 +22,7 @@
     padding: 10px;
     width: 256px;
     grid: 20px;
-    margin: 10px;
+    margin-bottom: 20px;
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
 
     @include media(856) {
