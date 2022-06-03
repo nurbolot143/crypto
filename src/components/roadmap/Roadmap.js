@@ -1,6 +1,6 @@
 import React from "react";
 
-const implSheetItems = [
+const roadmapItems = [
   { id: 0, descr: "", date: "November 2017", isActive: true },
   {
     id: 1,
@@ -36,34 +36,34 @@ const implSheetItems = [
   },
 ];
 
-const ImplSheet = () => {
+const Roadmap = () => {
   return (
-    <section className="implSheet">
+    <section className="roadmap">
       <div className="container__smaller">
         <h3 className="page">04. ROADMAP</h3>
-        <h2 className="subtitle implSheet__title">Implementation Sheet</h2>
+        <h2 className="subtitle roadmap__title">Implementation Sheet</h2>
 
-        <p className="text implSheet__text">
+        <p className="text roadmap__text">
           At Lymcoin we have one focus - creating a viable data marketplace to
           start returning value to token holders in the shortest time possible.
         </p>
 
-        <div className="implSheet__wrapper">
-          <ul className="implSheet__list">
-            {implSheetItems.map(({ id, descr, date, isActive }) => {
+        <div className="roadmap__wrapper">
+          <ul className="roadmap__list">
+            {roadmapItems.map(({ id, descr, date, isActive }) => {
               return (
                 <li
                   key={id}
                   className={
                     isActive
-                      ? "implSheet__item implSheet__item_active"
-                      : "implSheet__item"
+                      ? "roadmap__item roadmap__item_active"
+                      : "roadmap__item"
                   }
                 >
-                  <div className="implSheet__body">
-                    <div className="implSheet__descr">{descr}</div>
+                  <div className="roadmap__body">
+                    <div className="roadmap__descr">{descr}</div>
 
-                    <div className="implSheet__date">{date}</div>
+                    <div className="roadmap__date">{date}</div>
                   </div>
                 </li>
               );
@@ -75,4 +75,4 @@ const ImplSheet = () => {
   );
 };
 
-export default ImplSheet;
+export default Roadmap;

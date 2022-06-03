@@ -4,7 +4,7 @@ import Charts from "../components/charts/Charts";
 import Donate from "../components/donate/Donate";
 import Events from "../components/events/Events";
 import GlobalNetwork from "../components/globalNetwork/GlobalNetwork";
-import ImplSheet from "../components/implSheet/ImplSheet";
+import Roadmap from "../components/roadmap/Roadmap";
 import Info from "../components/info/Info";
 import Intro from "../components/intro/Intro";
 import Miner from "../components/miner/Miner";
@@ -20,7 +20,7 @@ const Home = () => {
       <Intro />
       <Benefits />
       <Info />
-      <ImplSheet />
+      <Roadmap />
       <Partners />
       <GlobalNetwork />
       <Wallets />

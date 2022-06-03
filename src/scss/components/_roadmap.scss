@@ -1,7 +1,7 @@
 @import "../media";
 @import "../vars";
 
-.implSheet {
+.roadmap {
   text-align: center;
 
   &__text {
@@ -29,7 +29,7 @@
     }
 
     &:nth-child(even) {
-      .implSheet__body {
+      .roadmap__body {
         align-self: end;
 
         @include media(830) {
@@ -47,7 +47,7 @@
     }
 
     &:nth-child(odd) {
-      .implSheet__body {
+      .roadmap__body {
         margin-bottom: -3px;
 
         &::after {
@@ -71,11 +71,11 @@
       }
     }
 
-    &_active .implSheet__body::after {
+    &_active .roadmap__body::after {
       background: $yellow;
     }
 
-    &_active .implSheet__body::before {
+    &_active .roadmap__body::before {
       background: $light;
       border-color: $yellow;
     }

@@ -49,13 +49,13 @@
   }
 
   .slick-arrow {
+    margin-top: -30px;
     border: 1px solid #4f4f4f;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: $light;
     z-index: 6;
-    background: url("../../assets/icons/right-arrow.svg") center no-repeat;
 
     @include media(770) {
       width: 30px;
@@ -64,18 +64,24 @@
   }
 
   .slick-prev {
-    transform: rotate(180deg);
-    margin-top: -27px;
+    background: url("../../assets/icons/prev.svg") center no-repeat;
+    &::before {
+      display: none;
+    }
 
-    @include media(1024) {
-      margin-top: -17px;
-      margin-left: 15px;
+    @include media(1200) {
+      margin-left: 20px;
     }
   }
 
   .slick-next {
-    @include media(1024) {
-      margin-right: 15px;
+    background: url("../../assets/icons/next.svg") center no-repeat;
+    &::before {
+      display: none;
+    }
+
+    @include media(1200) {
+      margin-right: 20px;
     }
   }
 
