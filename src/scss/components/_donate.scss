@@ -1,0 +1,100 @@
+@import "../media";
+@import "../vars";
+
+.donate {
+  margin: 99px 0 12px 0;
+
+  @include media(770) {
+    margin: 23px 0 12px 0;
+  }
+
+  &__top {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 36px;
+    justify-content: center;
+
+    @include media(872) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    padding: 23px;
+    flex: 0 1 50%;
+    justify-content: space-between;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+
+    background: $light;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+
+    @include media(872) {
+      flex: 1 1 auto;
+    }
+
+    @include media(470) {
+      padding: 18px;
+    }
+
+    @include media(370) {
+      padding: 5px;
+    }
+  }
+
+  &__icon {
+    max-width: 40px;
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    margin: 0 20px;
+
+    @include media(370) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+
+    @include media(470) {
+      font-size: 10px;
+    }
+  }
+
+  &__descr {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #4f4f4f;
+
+    @include media(470) {
+      font-size: 10px;
+    }
+  }
+
+  &__img {
+    max-width: 111px;
+    img {
+      width: 100%;
+    }
+  }
+}
